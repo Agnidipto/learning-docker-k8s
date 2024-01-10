@@ -1,10 +1,10 @@
 import redis
 from flask import Flask, request, jsonify
 
-cache = redis.Redis(host='localhost', port=6379)
+cache = redis.Redis(host='rdb', port=6379)
 app = Flask(__name__)
 
-decoder = lambda x : x.decode("utf-8") 
+decoder = lambda x : x.decode("utf-8") if x!=None else ''
 
 # Route for handling GET requests
 @app.route('/', methods=['GET'])
