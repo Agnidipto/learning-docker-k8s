@@ -1,0 +1,1 @@
+kubectl create secret docker-registry secret-cfg --docker-username=tiger --docker-password=pass113 --docker-server=www.yolo.com
